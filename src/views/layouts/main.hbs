@@ -17,11 +17,15 @@
     {{>navigation}}
 
     <div class="display-4 row mt-3">
-        <div class="form-group mx-auto" onload="new_clock()">
-            <a class="fa fa-globe" class="text-muted"></a>
-            <span id="fecha_registro" class="text-light mr-5"></span>
-            <span id="hora_registro" class="text-light"></span>
-            <a class="fa fa-globe" class="text-muted"></a>
+        <div class="row col-md-12" onload="new_clock()">
+            <div class="col-md-6 text-center">
+                <a class="fa fa-globe" class="text-muted"></a>
+                <span id="fecha_registro" class="text-light mr-5"></span>
+            </div>
+            <div class="col-md-6 text-center">
+                <span id="hora_registro" class="text-light"></span>
+                <a class="fa fa-globe" class="text-muted"></a>
+            </div>
         </div>
     </div>
     <main class="container">
