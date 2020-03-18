@@ -1,0 +1,30 @@
+<div class="container">
+    {{#if country }}
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-title bg-secondary">
+                    <h1 class="text-center text-white mt-2">
+                        {{country.Country}}
+                    </h1>
+                </div>
+                <div class="card-body mx-auto">
+                    <span class="h4"><i class="fa fa-heartbeat"></i> New Cases Recovered: {{country.NewRecovered}}</span><br>
+                    <span class="h4">Total: {{country.TotalRecovered}}</span><br>
+                    <span class="h4"><i class="fa fa-exclamation-triangle"></i> New Cases Confirmed: {{country.NewConfirmed}}</span><br>
+                    <span class="h4">Total: {{country.TotalConfirmed}}</span><br>
+                    <span class="h4"><i class="fa fa-address-card"></i> New Deaths: {{country.NewDeaths}}</span><br>
+                    <span class="h4">Total: {{country.TotalDeaths}}</span>
+                </div>
+                <div class="card-footer">
+                    <div class="row d-flex justify-content-center">
+                        <a href="/recovered/{{country.Country}}" class="badge badge-success">Recovered</a>
+                        <a href="/confirmed/{{country.Country}}" class="badge badge-warning">Confirmed</a>
+                        <a href="/death/{{country.Country}}" class="badge badge-danger text-white">Deaths</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+</div>

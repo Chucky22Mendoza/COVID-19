@@ -1,0 +1,30 @@
+<div class="container">
+    {{#if deaths }}
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-title bg-secondary">
+                    <h1 class="text-center text-white mt-2">
+                        <a href="/get-info/{{deaths.Country}}" class="text-white">{{deaths.Country}}</a>
+                    </h1>
+                </div>
+                <div class="card-body text-center">
+                    <span class="h4 mx-auto">{{deaths.Status}}</span><br>
+                    <span class="h4 mx-auto">{{deaths.Cases}} CASES</span><br>
+                </div>
+                <div class="card-footer">
+                    <div class="row d-flex justify-content-center">
+                        <input type="hidden" id="dateTimeRenderedDeaths" value="{{deaths.Date}}">
+                        <span id="renderTimeDeaths" class="h5"></span>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <a href="/recovered/{{deaths.Country}}" class="badge badge-success">Recovered</a>
+                        <a href="/confirmed/{{deaths.Country}}" class="badge badge-warning">Confirmed</a>
+                        <a href="/death/{{deaths.Country}}" class="badge badge-danger text-white">Deaths</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+</div>

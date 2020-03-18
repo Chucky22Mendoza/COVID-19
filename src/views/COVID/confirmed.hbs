@@ -1,0 +1,30 @@
+<div class="container">
+    {{#if confirmed }}
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-title bg-secondary">
+                    <h1 class="text-center text-white mt-2">
+                        <a href="/get-info/{{confirmed.Country}}" class="text-white">{{confirmed.Country}}</a>
+                    </h1>
+                </div>
+                <div class="card-body text-center">
+                    <span class="h4 mx-auto">{{confirmed.Status}}</span><br>
+                    <span class="h4 mx-auto">{{confirmed.Cases}} CASES</span><br>
+                </div>
+                <div class="card-footer">
+                    <div class="row d-flex justify-content-center">
+                        <input type="hidden" id="dateTimeRenderedConfirmed" value="{{confirmed.Date}}">
+                        <span id="renderTimeConfirmed" class="h5"></span>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <a href="/recovered/{{confirmed.Country}}" class="badge badge-success">Recovered</a>
+                        <a href="/confirmed/{{confirmed.Country}}" class="badge badge-warning">Confirmed</a>
+                        <a href="/death/{{confirmed.Country}}" class="badge badge-danger text-white">Deaths</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+</div>

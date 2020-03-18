@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/virus.svg">
+    <title>COVID-19 INFO</title>
+    <!-- BOOTSTRAP 4-->
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/sketchy/bootstrap.min.css" rel="stylesheet" integrity="sha384-2kOE+STGAkgemIkUbGtoZ8dJLqfvJ/xzRnimSkQN7viOfwRvWseF7lqcuNXmjwrL" crossorigin="anonymous">
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+    {{>navigation}}
+
+    <div class="display-4 row mt-3">
+        <div class="form-group mx-auto" onload="new_clock()">
+            <a class="fa fa-globe" class="text-muted"></a>
+            <span id="fecha_registro" class="text-light mr-5"></span>
+            <span id="hora_registro" class="text-light"></span>
+            <a class="fa fa-globe" class="text-muted"></a>
+        </div>
+    </div>
+    <main class="container">
+        {{{body}}}
+    </main>
+
+    <!-- BOOTSTRAP 4-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="/js/clock.js"></script>
+    <script src="/js/changeCountry.js"></script>
+    <script src="/js/renderTime.js"></script>
+    <script src="/js/renderTimeConfirmed.js"></script>
+    <script src="/js/renderTimeRecovered.js"></script>
+    <script src="/js/renderTimeDeaths.js"></script>
+</body>
+</html>

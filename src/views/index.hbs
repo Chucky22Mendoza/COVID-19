@@ -1,0 +1,52 @@
+<div class="row d-flex justify-content-center text-white">
+    <input type="hidden" id="dateTimeRenderedIndex" value="{{dataDateIndex}}">
+    <span id="renderTimeIndex" class="h5"></span>
+</div>
+
+<div class="container col-md-4 offset-md-4 mb-4">
+    <div class="input-group">
+        <select name="select-country" id="select-country" class="form-control">
+            {{#if response }}
+                {{#each response}}
+                    <option value="{{Country}}">{{Country}}</option>
+                {{/each}}
+            {{/if}}
+        </select>
+        <div class="input-group-append">
+            <a class="btn btn-primary btn-block" id="btn-search"><i class="fa fa-search"></i> Search</a>
+        </div>
+    </div>
+</div>
+
+<div class="">
+    {{#if response }}
+    <div class="row">
+        {{#each response}}
+        <div class="col-md-3">
+            <div class="card my-1">
+                <div class="card-title bg-secondary">
+                    <h4 class="text-center mt-2">
+                        <a href="/get-info/{{Country}}" class="text-white">{{Country}}</a>
+                    </h4>
+                </div>
+                <div class="card-body mx-auto">
+                    <span class="float-right"><i class="fa fa-heartbeat"></i> New Cases Recovered: {{NewRecovered}}</span><br>
+                    <span class="float-right">Total: {{TotalRecovered}}</span><br>
+                    <hr>
+                    <span class="float-right"><i class="fa fa-exclamation-triangle"></i> New Cases Confirmed: {{NewConfirmed}}</span><br>
+                    <span class="float-right">Total: {{TotalConfirmed}}</span><br>
+                    <hr>
+                    <span class="float-right"><i class="fa fa-address-card"></i> New Deaths: {{NewDeaths}}</span><br>
+                    <span class="float-right">Total: {{TotalDeaths}}</span>
+                </div>
+                <div class="card-footer row d-flex justify-content-center">
+                    <a href="/recovered/{{Country}}" class="badge badge-success">Recovered</a>
+                    <a href="/confirmed/{{Country}}" class="badge badge-warning">Confirmed</a>
+                    <a href="/death/{{Country}}" class="badge badge-danger text-white">Deaths</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+</div>
