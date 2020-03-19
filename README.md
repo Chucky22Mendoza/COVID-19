@@ -11,7 +11,7 @@
 * NodeJS
 * express
 * ES6
-* covid19api (<a href="https://covid-19-freeinfo.herokuapp.com/">Try API now</a>)
+* covid19api (<a href="https://covid19api.com/">Try API now</a>)
 * axios
 * handlebars (HTML5/CSS3)
 * heroku
