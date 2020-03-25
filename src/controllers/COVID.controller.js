@@ -13,6 +13,12 @@ indexCtrl.renderIndex = async (req, res) => {
     }catch (error) {
         console.log(error);
     }
+
+    dataCountries.forEach(( element, index) => {
+        if(element.Country === '') {
+            delete dataCountries[index]
+        }
+    })
     res.render('index', { response: dataCountries, dataDateIndex });
 }
 
